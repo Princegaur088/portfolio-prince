@@ -261,4 +261,20 @@ const work = {
   description: `Web development and AI automation projects by ${person.name}`,
 };
 
-export { person, social, newsletter, home, about, work };
+const blog = {
+  path: "/blog",
+  label: "Blog",
+  title: `Blog – ${person.name}`,
+  description: `Articles and insights about web development and AI automation by ${person.name}`,
+  enabled: true,
+};
+
+const gallery = {
+  path: "/gallery",
+  label: "Gallery",
+  title: `Gallery – ${person.name}`,
+  description: `A collection of projects and work samples by ${person.name}`,
+  enabled: true,
+};
+
+export { person, social, newsletter, home, about, work, blog, gallery };
