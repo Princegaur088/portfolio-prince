@@ -1,0 +1,16 @@
+{
+  "name": "Prince Gaur",
+  "title": "Cloud Engineer | Generative AI Developer | Freelancer",
+  "subtitle": "Empowering the future with scalable cloud systems and human-friendly AI.",
+  "cta": { " hire": "Hire Me", " projects": "View Projects" },
+  "bio": "I'm Prince Gaur, a Cloud Engineer and Generative AI Developer focused on building intelligent, cloud-native solutions. I combine cloud platforms, automation tools, and AI to create scalable web applications and human-centric digital experiences.\n\nI actively freelance and collaborate on projects ranging from AI voice assistants to dynamic 3D web experiences. Whether it's deploying microservices or automating forms, I love solving real-world problems through technology.\n\nI build responsive, fast-loading, and scalable web applications using modern technologies. My frontend designs are powered by Tailwind CSS, React, and animation libraries like Framer Motion, while the backend runs on Firebase, Supabase, or custom APIs.",
+  "projects": [
+    { "name": "visonsolar.ie", "description": "Notable Project" },
+    { "name": "autoexpress.ie", "description": "Notable Project" },
+    { "name": "anishkfoundation.org", "description": "Notable Project" }
+  ],
+  "automation": "I automate everything from document workflows to data-driven websites using platforms like:\n\n- **n8n** – For dynamic PDF generation, JSON-based form processing, and connecting APIs.\n- **Make.com** – For data syncing between apps, Google Sheets, and custom forms.\n- **Power Automate** – For enterprise workflows using MS Forms and Excel integration.\n\nHighlighted Use Cases:\n- AI Call Agent with voice response using Twilio + GPT.\n- Automated PDF form filling with images and nested JSON via n8n.\n- Real-time Google Form to Excel to PDF automation for reports or invoices.",
+  "tech": "🌩️ Cloud Platforms:\n- Google Cloud Platform (GCP), Firebase, Supabase, Cloud Run, GKE\n\n💻 Web Tech:\n- React.js, Next.js, Tailwind CSS, Three.js, Framer Motion\n\n🧠 AI & Automation:\n- ChatGPT, Gemini, DeepSeek AI, n8n, Make.com, Twilio AI voice agents\n\n📊 Backend / Tools:\n- Python, TypeScript, REST APIs, Docker, Node.js, Google Sheets API",
+  "blog": { "enabled": true, "title": "Blog" },
+  "work": { "enabled": true, "title": "Work" }
+} 

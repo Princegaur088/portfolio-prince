@@ -1,16 +1,16 @@
 import { Logo } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Prince",
+  lastName: "Gaur",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
+  role: "Full Stack Developer | AI Automation Specialist",
+  avatar: "/images/avatar.png",
   email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "Asia/Kolkata",
+  languages: ["English", "Hindi"],
 };
 
 const newsletter = {
@@ -18,24 +18,17 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I share insights on modern web development, AI automation, and how to build intelligent 
+      applications that solve real-world problems. Join me to learn about the latest in tech!
     </>
   ),
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
-  },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/prince-gaur-3b8034265/",
   },
   {
     name: "X",
@@ -54,17 +47,17 @@ const home = {
   image: "/images/og/home.jpg",
   label: "Home",
   title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  description: `Full Stack Developer & AI Automation Specialist building modern web applications`,
+  headline: <>Crafting Intelligent Web Experiences</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>Featured Project: <strong className="ml-4">AI-Powered Web Automation</strong></>,
+    href: "/work/ai-web-automation",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon={false} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I build modern web applications and AI automation solutions that help businesses scale.
+      <br /> Specializing in React, Next.js, and intelligent automation systems.
     </>
   ),
 };
@@ -73,7 +66,7 @@ const about = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Full Stack Developer & AI Automation Specialist building modern web applications`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -83,59 +76,86 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://wa.me/919560996293",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I'm Prince Gaur, a Full Stack Developer and AI Automation Specialist passionate about building 
+        modern web applications and intelligent automation solutions. I combine cutting-edge web technologies 
+        with AI to create efficient, scalable, and user-friendly applications. My expertise spans from 
+        building responsive web interfaces to developing complex AI automation systems that streamline 
+        business processes.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
+        company: "Freelance Developer",
         timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        role: "Full Stack Developer & AI Automation Specialist",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Developed and deployed AI-powered web applications using React, Next.js, and OpenAI's GPT, 
+            resulting in 40% faster customer service response times for clients.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Built automated document processing systems using n8n and Make.com, reducing manual data entry 
+            by 60% for multiple businesses.
+          </>,
+          <>
+            Created custom web automation solutions using Puppeteer and Playwright, helping clients 
+            automate repetitive tasks and improve operational efficiency.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/project-01/cover-01.png",
+            alt: "Freelance project cover image 1",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/cover-02.png",
+            alt: "Freelance project cover image 2",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/cover-03.png",
+            alt: "Freelance project cover image 3",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/cover-04.png",
+            alt: "Freelance project cover image 4",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Previous Company",
+        timeframe: "2020 - 2022",
+        role: "Web Developer & Automation Engineer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Led the development of a React-based admin dashboard that integrated with multiple AI services, 
+            improving team productivity by 45%.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Implemented automated testing and deployment pipelines using GitHub Actions and Docker, 
+            reducing deployment time by 70%.
+          </>,
+          <>
+            Developed RESTful APIs and microservices using Node.js and Express, supporting high-traffic 
+            web applications.
           </>,
         ],
         images: [],
@@ -143,50 +163,88 @@ const about = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education & Certifications",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Your University",
+        description: <>Bachelor's in Computer Science with focus on Web Technologies and AI.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Professional Certifications",
+        description: (
+          <>
+            • AWS Certified Developer Associate
+            <br />
+            • Google Cloud Professional Developer
+            <br />
+            • OpenAI API Specialist
+            <br />
+            • Advanced Web Development (Meta)
+          </>
+        ),
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Technical Expertise",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
+        title: "Frontend Development",
+        description: (
+          <>
+            Expert in building modern, responsive web applications using:
+            <br />• React.js, Next.js, TypeScript
+            <br />• Tailwind CSS, Styled Components
+            <br />• Redux, Context API
+            <br />• Framer Motion, Three.js for animations
+          </>
+        ),
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            src: "/images/projects/project-01/vision solar .png",
+            alt: "Vision Solar Dashboard - Modern React Frontend",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
+        title: "Backend & APIs",
+        description: (
+          <>
+            Building scalable backend systems with:
+            <br />• Node.js, Express, Python
+            <br />• RESTful APIs, GraphQL
+            <br />• MongoDB, PostgreSQL
+            <br />• Docker, Kubernetes
+          </>
+        ),
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            src: "/images/projects/project-01/vision solar2.png",
+            alt: "Vision Solar Backend Architecture",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "AI & Automation",
+        description: (
+          <>
+            Developing intelligent automation solutions using:
+            <br />• OpenAI GPT, Gemini AI
+            <br />• n8n, Make.com, Power Automate
+            <br />• Puppeteer, Playwright
+            <br />• Custom AI models and APIs
+          </>
+        ),
+        images: [
+          {
+            src: "/images/projects/project-01/callagent.png",
+            alt: "AI Call Agent - Intelligent Voice-Based Customer Service Automation",
             width: 16,
             height: 9,
           },
@@ -194,75 +252,13 @@ const about = {
       },
     ],
   },
-};
-
-const blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
 };
 
 const work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  description: `Web development and AI automation projects by ${person.name}`,
 };
 
-const gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
-};
-
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, work };

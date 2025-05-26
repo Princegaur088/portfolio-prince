@@ -1,6 +1,6 @@
 "use client";
 
-import { mailchimp } from "@/app/resources";
+import { mailchimp, person } from "@/app/resources";
 import { Button, Flex, Heading, Input, Text, Background, Column } from "@/once-ui/components";
 import { opacity, SpacingToken } from "@/once-ui/types";
 import { useState } from "react";
@@ -20,25 +20,21 @@ type NewsletterProps = {
 };
 
 export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
-  const [email, setEmail] = useState<string>("");
+  const [mobileNumber, setMobileNumber] = useState<string>("");
   const [error, setError] = useState<string>("");
   const [touched, setTouched] = useState<boolean>(false);
 
-  const validateEmail = (email: string): boolean => {
-    if (email === "") {
-      return true;
-    }
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
+  const validateMobileNumber = (number: string): boolean => {
+    // Basic validation: check if the number is not empty
+    return number.trim() !== "";
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    setEmail(value);
+    setMobileNumber(value);
 
-    if (!validateEmail(value)) {
-      setError("Please enter a valid email address.");
+    if (!validateMobileNumber(value)) {
+      setError("Please enter a valid mobile number.");
     } else {
       setError("");
     }
@@ -48,8 +44,22 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
 
   const handleBlur = () => {
     setTouched(true);
-    if (!validateEmail(email)) {
-      setError("Please enter a valid email address.");
+    if (!validateMobileNumber(mobileNumber)) {
+      setError("Please enter a valid mobile number.");
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (validateMobileNumber(mobileNumber) && !error) {
+      // Here you would typically send the mobileNumber to your backend
+      console.log("Mobile number submitted:", mobileNumber);
+      alert(`Mobile number ${mobileNumber} submitted. Your AI call agent test will be initiated shortly.`);
+      // Clear the input field after submission
+      setMobileNumber("");
+      setTouched(false);
+    } else {
+      setError("Please enter a valid mobile number before submitting.");
     }
   };
 
@@ -120,66 +130,23 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
       >
         {newsletter.description}
       </Text>
-      <form
-        style={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-        }}
-        action={mailchimp.action}
-        method="post"
-        id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form"
-      >
-        <Flex id="mc_embed_signup_scroll" fillWidth maxWidth={24} mobileDirection="column" gap="8">
+      <form onSubmit={handleSubmit} style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+        <Flex fillWidth maxWidth={24} mobileDirection="column" gap="8" horizontal="center">
           <Input
-            formNoValidate
             labelAsPlaceholder
-            id="mce-EMAIL"
-            name="EMAIL"
-            type="email"
-            label="Email"
+            id="mobile-number"
+            name="mobile-number"
+            type="tel"
+            label="Mobile Number"
             required
-            onChange={(e) => {
-              if (error) {
-                handleChange(e);
-              } else {
-                debouncedHandleChange(e);
-              }
-            }}
+            value={mobileNumber}
+            onChange={handleChange}
             onBlur={handleBlur}
-            errorMessage={error}
+            errorMessage={touched && error ? error : undefined}
           />
-          <div style={{ display: "none" }}>
-            <input
-              type="checkbox"
-              readOnly
-              name="group[3492][1]"
-              id="mce-group[3492]-3492-0"
-              value=""
-              checked
-            />
-          </div>
-          <div id="mce-responses" className="clearfalse">
-            <div className="response" id="mce-error-response" style={{ display: "none" }}></div>
-            <div className="response" id="mce-success-response" style={{ display: "none" }}></div>
-          </div>
-          <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}>
-            <input
-              type="text"
-              readOnly
-              name="b_c1a5a210340eb6c7bff33b2ba_0462d244aa"
-              tabIndex={-1}
-              value=""
-            />
-          </div>
-          <div className="clear">
-            <Flex height="48" vertical="center">
-              <Button id="mc-embedded-subscribe" value="Subscribe" size="m" fillWidth>
-                Subscribe
-              </Button>
-            </Flex>
-          </div>
+          <Button type="submit" size="m" fillWidth>
+            Test AI Call Agent
+          </Button>
         </Flex>
       </form>
     </Column>
