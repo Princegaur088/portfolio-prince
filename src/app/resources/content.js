@@ -275,6 +275,43 @@ const gallery = {
   title: `Gallery – ${person.name}`,
   description: `A collection of projects and work samples by ${person.name}`,
   enabled: true,
+  images: [
+    {
+      src: "/images/projects/project-01/vision solar .png",
+      alt: "Vision Solar Dashboard - Modern React Frontend",
+      orientation: "horizontal"
+    },
+    {
+      src: "/images/projects/project-01/vision solar2.png",
+      alt: "Vision Solar Backend Architecture",
+      orientation: "horizontal"
+    },
+    {
+      src: "/images/projects/project-01/callagent.png",
+      alt: "AI Call Agent - Intelligent Voice-Based Customer Service Automation",
+      orientation: "horizontal"
+    },
+    {
+      src: "/images/projects/project-01/cover-01.png",
+      alt: "Freelance project cover image 1",
+      orientation: "horizontal"
+    },
+    {
+      src: "/images/projects/project-01/cover-02.png",
+      alt: "Freelance project cover image 2",
+      orientation: "horizontal"
+    },
+    {
+      src: "/images/projects/project-01/cover-03.png",
+      alt: "Freelance project cover image 3",
+      orientation: "horizontal"
+    },
+    {
+      src: "/images/projects/project-01/cover-04.png",
+      alt: "Freelance project cover image 4",
+      orientation: "horizontal"
+    }
+  ]
 };
 
 export { person, social, newsletter, home, about, work, blog, gallery };

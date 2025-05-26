@@ -3,7 +3,13 @@
 import Masonry from "react-masonry-css";
 import { SmartImage } from "@/once-ui/components";
 import styles from "./Gallery.module.scss";
-import { gallery } from "@/app/resources/content";
+import { gallery } from "@/app/resources";
+
+type GalleryImage = {
+  src: string;
+  alt: string;
+  orientation: string;
+};
 
 export default function MasonryGrid() {
   const breakpointColumnsObj = {
@@ -17,7 +23,7 @@ export default function MasonryGrid() {
       className={styles.masonryGrid}
       columnClassName={styles.masonryGridColumn}
     >
-      {gallery.images.map((image, index) => (
+      {gallery.images.map((image: GalleryImage, index: number) => (
         <SmartImage
           priority={index < 10}
           sizes="(max-width: 560px) 100vw, 50vw"
